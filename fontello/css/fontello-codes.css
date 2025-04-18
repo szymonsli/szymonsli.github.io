@@ -1,0 +1,8 @@
+
+.icon-star:before { content: '\e800'; } /* '' */
+.icon-star-empty:before { content: '\e802'; } /* '' */
+.icon-location:before { content: '\e803'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-mobile:before { content: '\f10b'; } /* '' */
+.icon-star-half-alt:before { content: '\f123'; } /* '' */
+.icon-linkedin-squared:before { content: '\f30c'; } /* '' */

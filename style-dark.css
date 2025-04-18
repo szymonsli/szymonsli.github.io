@@ -1,0 +1,153 @@
+html {
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  print-color-adjust: exact;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  background-color: #222232;
+  color: white;
+}
+
+header {
+  flex-grow: 1;
+  print-color-adjust: exact;
+  padding: 2em;
+  background-color: brown;
+  /* border-bottom-left-radius: 10mm; */
+  border-bottom-right-radius: 2em;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  print-color-adjust: exact;
+  flex-grow: 10;
+  height: 100%;
+  background-color: #222232;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+section:nth-child(1) > h2 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+footer {
+  padding: 2em;
+  flex-grow: 1;
+  background-color: #222232;
+  /* font-size: 0.8em; */
+}
+
+ul {
+  padding-left: 1em;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;  
+}
+
+.row {
+  display: flex;
+  flex-direction: row;  
+}
+
+.timerange {
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+}
+
+.right {
+  flex-grow: 2;
+  padding: 2em;
+  height: 100%;
+}
+
+.contact-section {
+  padding-top: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.left-bg {
+  background-color: brown;
+}
+
+.left {
+  /* background-color: rgb(171, 214, 252); */
+  flex-grow: 1;
+  background-color: #222232;
+  border-top-left-radius: 2em;
+  height: 100%;
+  padding-top: 2em;
+  padding-left: 2em;
+}
+
+h1 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.exp {
+  padding-top: 1em;
+}
+
+.company {
+  font-weight: 600;
+}
+
+.tasks, .who {
+  padding-left: 1em;
+}
+
+footer > p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.icon-star {
+  margin-left: -6px;
+  color: burlywood;
+}
+
+.icon-star-half-alt {
+  margin-left: -6px;
+  color: burlywood;
+}
+
+.icon-star-empty {
+  margin-left: -6px;
+  color: burlywood;
+}

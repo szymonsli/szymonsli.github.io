@@ -1,0 +1,186 @@
+body {
+  font-family: "Chakra Petch", sans-serif;
+  print-color-adjust: exact;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  color: #222232;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  flex-grow: 1;
+  padding: 2em;
+  background-color: antiquewhite;
+  /* border-bottom-left-radius: 2em; */
+  border-bottom-right-radius: 2em;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 10;
+  height: 100%;
+  background-color: white;
+}
+
+footer {
+  background-color: white;
+  padding: 2em;
+  flex-grow: 1;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+section:nth-child(1) > h2 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 0.5em;
+  padding-bottom: 0;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* .tasks li {
+  list-style-type: "- " !important;
+  list-style-position: inside;
+} */
+
+.col {
+  display: flex;
+  flex-direction: column;  
+}
+
+.row {
+  display: flex;
+  flex-direction: row;  
+}
+
+.timerange {
+  width: 113px;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-wrap: nowrap;
+  text-align: right;
+}
+
+.right {
+  flex-grow: 1;
+  padding: 2em;
+  /* height: 100%; */
+  border-left: 1px solid antiquewhite;
+  /* border-top-left-radius: 2em; */
+  background-color: white;
+  height: 100%;
+}
+
+.contact-section {
+  padding-top: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.bg {
+  background-color: antiquewhite;
+  /* flex-grow: 1; */
+  /* width: 30%; */
+}
+
+.left {
+  /* background-color: rgb(171, 214, 252); */
+  /* flex-grow: 1; */
+  background-color: white;
+  border-top-left-radius: 2em;
+  /* border-top-right-radius: 2em; */
+  height: 100%;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+h1 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  color: #222232;
+  text-decoration: none;
+}
+
+.exp {
+  width: 100%;
+  padding-top: 1em;
+  padding-left: 0.5em;
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+}
+
+.exp-first {
+  padding-top: 0;
+}
+
+.company, .who {
+  font-weight: 600;
+}
+
+.tasks {
+  text-wrap: wrap;
+}
+
+footer > p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.icon-star {
+  margin-left: -6px;
+  color: burlywood;
+}
+
+.icon-star-half-alt {
+  margin-left: -6px;
+  color: burlywood;
+}
+
+.icon-star-empty {
+  margin-left: -6px;
+  color: burlywood;
+}
