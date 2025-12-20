@@ -1,0 +1,146 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  print-color-adjust: exact;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  background-image: url("/assets/bg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: #111;
+  background-position: top;
+  background-attachment: fixed;
+  color: #EEE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 6em;
+}
+
+section {
+  padding: 4em;
+  margin: 0;
+  height: calc(100vh - 14em);
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;  
+}
+
+.row {
+  display: flex;
+  flex-direction: row;  
+}
+
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 6em;
+  width: 100%;
+}
+
+.whoami {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  margin-left: 4em;
+}
+
+.whoami > h1 {
+  font-size: 1.6em;
+}
+
+.top-menu {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-right: 4em;
+}
+
+.menu-item-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-item {
+  color: #EEE;
+  text-decoration: none;
+  padding: 0 2em;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #00d000;
+  text-decoration: underline;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+}
+
+.terminal-block {
+  margin-bottom: 0.5em;
+}
+
+.terminal-user {
+  color: #00d000;
+}
+
+.terminal-path {
+  color: #6666f0;
+}
+
+.article {
+  margin-bottom: 1em;
+}
+
+a {
+  color: #EEE;
+  text-decoration: none;
+}
+
+.post-date {
+  color: #666;
+  font-size: 0.8em;
+  margin-top: 0.6em;
+}
