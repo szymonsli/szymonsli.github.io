@@ -1,6 +1,6 @@
 ---
 title: Byte conversions in Python
-layout: layouts/post.html
+layout: layouts/post.njk
 tags: cheatsheets
 short: Bytes, strings, int, hex and bin
 date: 06/02/2026
