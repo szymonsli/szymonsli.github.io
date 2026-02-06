@@ -9,4 +9,8 @@ export default async function (eleventyConfig) {
   eleventyConfig.addDateParsing(function (dateValue) {
     return DateTime.fromFormat(String(dateValue), "yyyy-MM-dd");
   });
+
+  return {
+    pathPrefix: "szymonsli.github.io",
+  };
 }
