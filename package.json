@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx @11ty/eleventy --serve"
+    "dev": "npx @11ty/eleventy --serve",
+    "build-ghpages": "npx @11ty/eleventy --pathprefix 'szymonsli.github.io'"
   },
   "keywords": [],
   "author": "",
