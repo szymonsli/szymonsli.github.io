@@ -1,6 +1,9 @@
 import { DateTime } from "luxon";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default async function (eleventyConfig) {
+  eleventyConfig.addPlugin(syntaxHighlight);
+
   eleventyConfig.addPassthroughCopy("assets");
 
   eleventyConfig.addDateParsing(function (dateValue) {

@@ -30,11 +30,18 @@ body {
 }
 
 section {
-  padding: 4em;
+  padding: 4em 16em;
   margin: 0;
-  height: calc(100vh - 14em);
+  min-height: calc(100vh - 23em);
   display: flex;
   flex-direction: column;
+}
+
+footer {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  padding: 4em;
 }
 
 .col {
@@ -141,6 +148,9 @@ a {
 
 .post-date {
   color: #666;
-  font-size: 0.8em;
-  margin-top: 0.6em;
+  margin-right: 0.6em;
+}
+
+h3 {
+  padding-bottom: 0.6em;
 }
