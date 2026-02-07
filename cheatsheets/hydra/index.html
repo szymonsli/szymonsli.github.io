@@ -48,7 +48,12 @@
 <pre class="language-sh"><code class="language-sh">hydra <span class="token parameter variable">-U</span> http-post-form</code></pre>
 <h4>HTTP POST</h4>
 <pre class="language-sh"><code class="language-sh">hydra <span class="token parameter variable">-L</span> users.txt <span class="token parameter variable">-P</span> passwords.txt <span class="token number">10.0</span>.0.2 <span class="token parameter variable">-s</span> <span class="token number">8080</span> http-post-form <span class="token string">"/login:username=^USER^&amp;password=^PASS^:Invalid"</span></code></pre>
-<p>POST request sent to <code>http://10.0.0.2:8080/login</code> with body parameters <code>login:username=^USER^&amp;password=^PASS^</code> and checking if the result contains phrase <code>Invalid</code>.</p>
+<p>What does it mean?</p>
+<ul>
+<li>Sends POST requests to <code>http://10.0.0.2:8080/login</code></li>
+<li>Each request has body <code>login:username=^USER^&amp;password=^PASS^</code>, where ^USER^ is a value from users.txt file and ^PASS^ is a value from passwords.txt</li>
+<li>If there is the &quot;Invalid&quot; phrase in response, it continues the attack, otherwise the result is successfully found</li>
+</ul>
 <h4>SSH</h4>
 <pre class="language-sh"><code class="language-sh">hydra <span class="token parameter variable">-L</span> /wordlists/useres.txt <span class="token parameter variable">-P</span> /wordlists/passwords.txt <span class="token parameter variable">-t</span> <span class="token number">8</span> ssh://10.0.0.2</code></pre>
 </div>
@@ -56,7 +61,7 @@
 </main>
     <footer>
       <div></div>
-      <div>Szymon Śliwiński 2026</div>
+      <div>Crafted by Szymon Śliwiński 2026</div>
     </footer>
   </body>
 </html>
