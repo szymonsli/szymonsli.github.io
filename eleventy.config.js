@@ -6,6 +6,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/_includes");
 
   eleventyConfig.addDateParsing(function (dateValue) {
     return DateTime.fromFormat(String(dateValue), "yyyy-MM-dd");
@@ -14,6 +15,7 @@ export default async function (eleventyConfig) {
   return {
     dir: {
       input: "src",
+      output: "_site",
     },
   };
 }
