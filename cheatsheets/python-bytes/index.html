@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Szymonsli</title>
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="whoami">
+        <h1>Szymon Śliwiński</h1>
+      </div>
+      <nav class="top-menu">
+        <div class="menu-item-container">
+          <a class="menu-item" href="/szymonsli.github.io/"> Home </a>
+          <a class="menu-item" href="/szymonsli.github.io/blog"> Blog </a>
+          <a class="menu-item" href="/szymonsli.github.io/cheatsheets">
+            Cheatsheets
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+<section>
+  <h2>Byte conversions in Python</h2>
+  <div><h4>From int</h4>
+<p>Char representation of a number. Only one character can be converted</p>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token number">83</span><span class="token punctuation">)</span>
+<span class="token string">'S'</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token number">0x53</span><span class="token punctuation">)</span>
+<span class="token string">'S'</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token number">261</span><span class="token punctuation">)</span>
+<span class="token string">'ą'</span></code></pre>
+<p>From int to string with hex representation</p>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">hex</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span>
+<span class="token string">'0x2a'</span></code></pre>
+<p>From int to string with binary representation</p>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">bin</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span>
+<span class="token string">'0b101010'</span></code></pre>
+<p>From int to bytes</p>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> num <span class="token operator">=</span> <span class="token number">12</span>
+<span class="token operator">>></span><span class="token operator">></span> num<span class="token punctuation">.</span>to_bytes<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> byteorder<span class="token operator">=</span><span class="token string">'big'</span><span class="token punctuation">)</span>
+<span class="token string">b'\x00\x0c'</span></code></pre>
+<h4>From bytes</h4>
+<p>Bytes initialization</p>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> bytes_value <span class="token operator">=</span> <span class="token string">b"Value\x20\x3a\x29"</span>
+<span class="token operator">>></span><span class="token operator">></span> bytes_value
+<span class="token string">b'Value :)'</span></code></pre>
+<p>From bytes to hex string</p>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> bytes_value<span class="token punctuation">.</span><span class="token builtin">hex</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token string">'56616c7565203a29'</span></code></pre>
+<p>From bytes to int</p>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">(</span>bytes_value<span class="token punctuation">.</span><span class="token builtin">hex</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span>
+<span class="token number">6224375411466320425</span></code></pre>
+<p>From bytes to string</p>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> bytes_value<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token string">'Value :)'</span>
+<span class="token operator">>></span><span class="token operator">></span> bytes_value<span class="token punctuation">.</span>decode<span class="token punctuation">(</span>encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
+<span class="token string">'Value :)'</span></code></pre>
+</div>
+</section>
+</main>
+    <footer>
+      <div></div>
+      <div>Szymon Śliwiński 2026</div>
+    </footer>
+  </body>
+</html>

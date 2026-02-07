@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Szymonsli</title>
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="whoami">
+        <h1>Szymon Śliwiński</h1>
+      </div>
+      <nav class="top-menu">
+        <div class="menu-item-container">
+          <a class="menu-item" href="/szymonsli.github.io/"> Home </a>
+          <a class="menu-item" href="/szymonsli.github.io/blog"> Blog </a>
+          <a class="menu-item" href="/szymonsli.github.io/cheatsheets">
+            Cheatsheets
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+<section>
+  <h2>Hydra</h2>
+  <div><p>Hydra is a brute-forcing tool for penetration testers. Do not use this tool for systems or applications you don't own or without permission!</p>
+<h4>Important parameters:</h4>
+<pre class="language-txt"><code class="language-txt">-h => help
+-l => single username
+-L => path to a wordlist with usernames
+-p => single password
+-P => path to a wordlist with usernames
+-C => path to a file with login:password wordlist. Used instaed of -L and -P
+-s => port, if different than default is used
+-M => path to a file with targets
+-t => number of threads (default 16)
+-U => help for a specific module</code></pre>
+<h4>Help for a module:</h4>
+<pre class="language-sh"><code class="language-sh">hydra <span class="token parameter variable">-U</span> http-post-form</code></pre>
+<h4>HTTP POST</h4>
+<pre class="language-sh"><code class="language-sh">hydra <span class="token parameter variable">-L</span> users.txt <span class="token parameter variable">-P</span> passwords.txt <span class="token number">10.0</span>.0.2 <span class="token parameter variable">-s</span> <span class="token number">8080</span> http-post-form <span class="token string">"/login:username=^USER^&amp;password=^PASS^:Invalid"</span></code></pre>
+<p>POST request sent to <code>http://10.0.0.2:8080/login</code> with body parameters <code>login:username=^USER^&amp;password=^PASS^</code> and checking if the result contains phrase <code>Invalid</code>.</p>
+<h4>SSH</h4>
+<pre class="language-sh"><code class="language-sh">hydra <span class="token parameter variable">-L</span> /wordlists/useres.txt <span class="token parameter variable">-P</span> /wordlists/passwords.txt <span class="token parameter variable">-t</span> <span class="token number">8</span> ssh://10.0.0.2</code></pre>
+</div>
+</section>
+</main>
+    <footer>
+      <div></div>
+      <div>Szymon Śliwiński 2026</div>
+    </footer>
+  </body>
+</html>
