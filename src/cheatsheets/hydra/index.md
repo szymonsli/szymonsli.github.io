@@ -35,7 +35,11 @@ hydra -U http-post-form
 hydra -L users.txt -P passwords.txt 10.0.0.2 -s 8080 http-post-form "/login:username=^USER^&password=^PASS^:Invalid"
 ```
 
-POST request sent to `http://10.0.0.2:8080/login` with body parameters `login:username=^USER^&password=^PASS^` and checking if the result contains phrase `Invalid`.
+What does it mean?
+
+- Sends POST requests to `http://10.0.0.2:8080/login`
+- Each request has body `login:username=^USER^&password=^PASS^`, where ^USER^ is a value from users.txt file and ^PASS^ is a value from passwords.txt
+- If there is the "Invalid" phrase in response, it continues the attack, otherwise the result is successfully found
 
 #### SSH
 
