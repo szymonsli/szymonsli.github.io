@@ -10,7 +10,7 @@ export default async function (eleventyConfig) {
     return DateTime.fromFormat(String(dateValue), "yyyy-MM-dd");
   });
 
-  return {
-    pathPrefix: "szymonsli.github.io",
-  };
+  // return {
+  //   pathPrefix: "szymonsli.github.io",
+  // };
 }
