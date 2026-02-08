@@ -6,7 +6,7 @@ short: Bytes, strings, int, hex and bin
 date: 06/02/2026
 ---
 
-#### From int
+### From int
 
 Char representation of a number. Only one character can be converted
 
@@ -41,7 +41,7 @@ From int to bytes
 b'\x00\x0c'
 ```
 
-#### From bytes
+### From bytes
 
 Bytes initialization
 

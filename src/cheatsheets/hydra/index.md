@@ -8,7 +8,7 @@ date: 21/12/2025
 
 Hydra is a brute-forcing tool for penetration testers. Do not use this tool for systems or applications you don't own or without permission!
 
-#### Important parameters:
+### Important parameters:
 
 ```txt
 -h => help
@@ -23,13 +23,13 @@ Hydra is a brute-forcing tool for penetration testers. Do not use this tool for 
 -U => help for a specific module
 ```
 
-#### Help for a module:
+### Help for a module:
 
 ```sh
 hydra -U http-post-form
 ```
 
-#### HTTP POST
+### HTTP POST
 
 ```sh
 hydra -L users.txt -P passwords.txt 10.0.0.2 -s 8080 http-post-form "/login:username=^USER^&password=^PASS^:Invalid"
@@ -41,7 +41,7 @@ What does it mean?
 - Each request has body `login:username=^USER^&password=^PASS^`, where ^USER^ is a value from users.txt file and ^PASS^ is a value from passwords.txt
 - If there is the "Invalid" phrase in response, it continues the attack, otherwise the result is successfully found
 
-#### SSH
+### SSH
 
 ```sh
 hydra -L /wordlists/useres.txt -P /wordlists/passwords.txt -t 8 ssh://10.0.0.2
