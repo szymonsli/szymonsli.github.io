@@ -146,7 +146,7 @@ footer {
   }
   .whoami { margin-left: 4em; }
   .top-menu { margin-right: 2em; }
-  .menu-item { padding: 0 2em; }
+  .menu-item:not(#language-switcher) { padding: 0 2em; }
   footer { padding: 4em; }
 }
 
@@ -184,6 +184,10 @@ footer {
 a:hover {
   color: #00d000;
   text-decoration: underline;
+}
+
+#language-switcher a {
+  text-decoration: none;
 }
 
 h2 {

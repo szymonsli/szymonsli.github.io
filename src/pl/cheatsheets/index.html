@@ -1,0 +1,19 @@
+---
+layout: layouts/base.html
+title: Cheatsheets
+---
+
+<section class="articles-list">
+  <h2>Cheatsheets</h2>
+  {% for post in collections.cheatsheets %}
+  <div class="article">
+    <a href="{{ post.url }}">
+      <h3>{{ post.data.title }}</h3>
+      <div>
+        <span class="post-date">{{ post.data.date }}</span>
+        {{ post.data.short }}
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</section>
