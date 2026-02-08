@@ -93,6 +93,22 @@ footer {
   padding: 2em;
 }
 
+#about-me-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+#about-me-name {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 @media (min-width: 600px) {
   section {
     min-height: calc(100vh - 13em);
@@ -110,6 +126,17 @@ footer {
     padding: 0 0.5em;
     height: 100%;
    }
+   #about-me-container {
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  #about-me-name {
+    margin-left: 2em;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+  }
 }
 
 @media (min-width: 940px) {
@@ -120,7 +147,7 @@ footer {
   .whoami { margin-left: 4em; }
   .top-menu { margin-right: 2em; }
   .menu-item { padding: 0 2em; }
-  footer { padding: 4em; }  
+  footer { padding: 4em; }
 }
 
 @media (min-width: 1200px) {
@@ -204,6 +231,10 @@ h3 {
 
 #about-me li {
   margin-bottom: 0.5em;
+}
+
+#about-me a {
+  text-decoration: underline;
 }
 
 #about-me-avatar {
