@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+    <title>Szymonsli</title>
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="whoami">
+        <h1>Szymon Śliwiński</h1>
+      </div>
+      <nav class="top-menu">
+        <div class="menu-item-container">
+          <a class="menu-item" href="/"> Home </a>
+          <a class="menu-item" href="/about"> About me </a>
+          <!-- <a class="menu-item" href="/blog"> Blog </a> -->
+          <a class="menu-item" href="/cheatsheets">
+            Cheatsheets
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+<section>
+  <h2>ADB commands</h2>
+  <div><h3>Get available devices</h3>
+<pre class="language-sh"><code class="language-sh">$ adb devices
+List of devices attached
+5722edc1        device</code></pre>
+<p>Or for more details:</p>
+<pre class="language-sh"><code class="language-sh">$ adb devices <span class="token parameter variable">-l</span>
+List of devices attached
+5722edc1        device product:joyeuse_eea model:Redmi_Note_9_Pro device:joyeuse transport_id:6</code></pre>
+<h3>Connection</h3>
+<p>The number <code>5722edc1</code> is this device's serial number. You can use this number to send commands to a specific device with the <code>-s</code> flag.</p>
+<pre class="language-sh"><code class="language-sh">$ adb <span class="token parameter variable">-s</span> 5722edc1 <span class="token punctuation">[</span>command<span class="token punctuation">]</span></code></pre>
+<p>There is no need to use the serial number if only one device is connected.</p>
+<pre class="language-sh"><code class="language-sh">$ adb <span class="token punctuation">[</span>command<span class="token punctuation">]</span></code></pre>
+<p>If only one USB device is available, the <code>-d</code> flag can be used.</p>
+<pre class="language-sh"><code class="language-sh">$ adb <span class="token parameter variable">-d</span> <span class="token punctuation">[</span>command<span class="token punctuation">]</span></code></pre>
+<p>If only one TCP/IP device is available, the <code>-e</code> flag can be used.</p>
+<h3>Shell connection</h3>
+<pre class="language-sh"><code class="language-sh">$ adb <span class="token parameter variable">-s</span> 5722edc1 shell
+joyeuse:/ $</code></pre>
+<h3>App installation</h3>
+<pre class="language-sh"><code class="language-sh">$ adb <span class="token parameter variable">-s</span> 5722edc1 <span class="token function">install</span> app.apk
+Performing Streamed Install
+Success</code></pre>
+<h3>File transfer</h3>
+<p>Get a file from the device</p>
+<pre class="language-sh"><code class="language-sh">$ adb <span class="token parameter variable">-s</span> 5722edc1 pull /path/to/file.txt ./local_directory</code></pre>
+<p>Upload a file to the device</p>
+<pre class="language-sh"><code class="language-sh">$ adb <span class="token parameter variable">-s</span> 5722edc1 push ./file.txt /device_directory/path</code></pre>
+<h3>Logs</h3>
+<pre class="language-sh"><code class="language-sh">$ adb <span class="token parameter variable">-s</span> 5722edc1 logcat</code></pre>
+</div>
+</section>
+</main>
+    <footer>
+      <div></div>
+      <div>Crafted by Szymon Śliwiński 2026</div>
+    </footer>
+  </body>
+</html>
