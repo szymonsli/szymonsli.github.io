@@ -1,7 +1,7 @@
 ---
 title: Hydra
 layout: layouts/post.html
-tags: cheatsheets
+tags: en_cheatsheets
 short: Brute force tool
 date: 21/12/2025
 ---

@@ -1,0 +1,16 @@
+{
+  "pl": {
+    "home": "Start",
+    "about": "O mnie",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "cheatsheets": "Cheatsheets"
+  },
+  "en": {
+    "home": "Home",
+    "about": "About me",
+    "contact": "Contact",
+    "blog": "Blog",
+    "cheatsheets": "Cheatsheets"
+  }
+}

@@ -1,14 +1,14 @@
 ---
-title: Number, Character and Byte Conversions in Python
+title: Konwersje liczb, znaków i bajtów w Pythonie
 layout: layouts/post.html
-tags: en_cheatsheets
-short: Bytes, characters, hexadecimal, binary numbers
+tags: cheatsheets
+short: Bajty, znaki, liczby heksadecymalne, binarne
 date: 06/02/2026
 ---
 
-### Conversions from `int` type
+### Konwersje z typu `int`
 
-Converting a number to its Unicode representation.
+Konwersja liczby na jej reprezentację w Unicode.
 
 ```python
 >>> chr(83)
@@ -19,28 +19,28 @@ Converting a number to its Unicode representation.
 'ą'
 ```
 
-Converting a number to a string with its hexadecimal value.
+Konwersja liczby na string z jej wartością heksadecymalną.
 
 ```python
 >>> hex(42)
 '0x2a'
 ```
 
-Converting a number to a string with its binary value.
+Konwersja liczby na string z jej wartością binarną.
 
 ```python
 >>> bin(42)
 '0b101010'
 ```
 
-Converting a number to a string with its octal value.
+Konwersja liczby na string z jej wartością ósemkową.
 
 ```python
 >>> oct(42)
 '0o52'
 ```
 
-From number to `bytes` type
+Z liczby na typ `bytes`
 
 ```python
 >>> num = 12
@@ -48,9 +48,9 @@ From number to `bytes` type
 b'\x00\x0c'
 ```
 
-### Conversions from `bytes` type
+### Konwersje z typu `bytes`
 
-Initializing `bytes` type
+Inicjalizacja typu `bytes`
 
 ```python
 >>> bytes_value = b"Value\x20\x3a\x29"
@@ -64,7 +64,7 @@ b'Value :)'
 b'asdf'
 ```
 
-From `bytes` to string with hexadecimal value
+Z `bytes` na string z wartością heksadecymalną
 
 ```python
 >>> bytes_value = b"Value\x20\x3a\x29"
@@ -72,7 +72,7 @@ From `bytes` to string with hexadecimal value
 '56616c7565203a29'
 ```
 
-From `bytes` to `int`
+Z `bytes` na `int`
 
 ```python
 >>> bytes_value = b"Value\x20\x3a\x29"
@@ -80,7 +80,7 @@ From `bytes` to `int`
 6224375411466320425
 ```
 
-From `bytes` to `str`
+Z `bytes` na `str`
 
 ```python
 >>> bytes_value = b"Value\x20\x3a\x29"
@@ -90,9 +90,9 @@ From `bytes` to `str`
 'Value :)'
 ```
 
-### Conversions from string
+### Konwersje ze stringa
 
-From `str` to bytes
+Z `str` na bytes
 
 ```python
 >>> a = "Hello world!"
@@ -100,28 +100,28 @@ From `str` to bytes
 b'Hello world!'
 ```
 
-From string with hexadecimal value to `bytes`
+Ze stringa z wartością heksadecymalną na `bytes`
 
 ```python
 >>> bytes.fromhex("4548")
 b'EH'
 ```
 
-From single character to numeric Unicode representation (opposite of `chr()`)
+Z pojedynczego znaku na liczbową reprezentację z Unicode (przeciwieństwo `chr()`)
 
 ```python
 >>> ord("a")
 97
 ```
 
-From string with decimal value to number
+Ze stringa z wartością dziesiętną na liczbę
 
 ```python
 >>> int("1234")
 1234
 ```
 
-From string with binary value to number
+Ze stringa z wartością binarną na liczbę
 
 ```python
 >>> int("10011", 2)
@@ -133,7 +133,7 @@ From string with binary value to number
 19
 ```
 
-From string with hexadecimal value to number
+Ze stringa z wartością heksadecymalną na liczbę
 
 ```python
 >>> int("e4b", 16)

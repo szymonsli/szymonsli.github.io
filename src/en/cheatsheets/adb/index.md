@@ -1,7 +1,7 @@
 ---
 title: ADB commands
 layout: layouts/post.html
-tags: cheatsheets
+tags: en_cheatsheets
 short: Useful commands for Android Debug Bridge
 date: 08/02/2026
 ---
