@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,7 @@
     <header class="top-bar">
       <div class="whoami">
         <h1>
-          <a href="/"
+          <a href="/en/"
             >Szymon Śliwiński</a
           >
         </h1>
@@ -26,89 +26,89 @@
       <nav class="top-menu">
         <div class="menu-item-container">
           
-          <a class="menu-item" href="/about">
-            O mnie
+          <a class="menu-item" href="/en/about">
+            About me
           </a>
-          <!-- <a class="menu-item" href="/blog"> Blog </a> -->
-          <a class="menu-item" href="/cheatsheets">
+          <!-- <a class="menu-item" href="/en/blog"> Blog </a> -->
+          <a class="menu-item" href="/en/cheatsheets">
             Cheatsheets
           </a>
           <div class="menu-item" id="language-switcher"><a
-              href="/en/cheatsheets/python-bytes/"
-              onclick="localStorage.setItem('language', 'en')"
-              hreflang="en"
+              href="/cheatsheets/python-bytes/"
+              onclick="localStorage.setItem('language', 'pl')"
+              hreflang="pl"
             >
-              🇬🇧
+              🇵🇱
             </a></div>
         </div>
       </nav>
     </header>
     <main>
 <section>
-  <h2>Konwersje liczb, znaków i bajtów w Pythonie</h2>
-  <div><h3>Konwersje z typu <code>int</code></h3>
-<p>Konwersja liczby na jej reprezentację w Unicode.</p>
+  <h2>Number, Character and Byte Conversions in Python</h2>
+  <div><h3>Conversions from <code>int</code> type</h3>
+<p>Converting a number to its Unicode representation.</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token number">83</span><span class="token punctuation">)</span>
 <span class="token string">'S'</span>
 <span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token number">0x53</span><span class="token punctuation">)</span>
 <span class="token string">'S'</span>
 <span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token number">261</span><span class="token punctuation">)</span>
 <span class="token string">'ą'</span></code></pre>
-<p>Konwersja liczby na string z jej wartością heksadecymalną.</p>
+<p>Converting a number to a string with its hexadecimal value.</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">hex</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span>
 <span class="token string">'0x2a'</span></code></pre>
-<p>Konwersja liczby na string z jej wartością binarną.</p>
+<p>Converting a number to a string with its binary value.</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">bin</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span>
 <span class="token string">'0b101010'</span></code></pre>
-<p>Konwersja liczby na string z jej wartością ósemkową.</p>
+<p>Converting a number to a string with its octal value.</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">oct</span><span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span>
 <span class="token string">'0o52'</span></code></pre>
-<p>Z liczby na typ <code>bytes</code></p>
+<p>From number to <code>bytes</code> type</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> num <span class="token operator">=</span> <span class="token number">12</span>
 <span class="token operator">>></span><span class="token operator">></span> num<span class="token punctuation">.</span>to_bytes<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> byteorder<span class="token operator">=</span><span class="token string">'big'</span><span class="token punctuation">)</span>
 <span class="token string">b'\x00\x0c'</span></code></pre>
-<h3>Konwersje z typu <code>bytes</code></h3>
-<p>Inicjalizacja typu <code>bytes</code></p>
+<h3>Conversions from <code>bytes</code> type</h3>
+<p>Initializing <code>bytes</code> type</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> bytes_value <span class="token operator">=</span> <span class="token string">b"Value\x20\x3a\x29"</span>
 <span class="token operator">>></span><span class="token operator">></span> bytes_value
 <span class="token string">b'Value :)'</span></code></pre>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token builtin">bytes</span><span class="token punctuation">(</span><span class="token string">"asdf"</span><span class="token punctuation">,</span> encoding <span class="token operator">=</span> <span class="token string">"utf-8"</span><span class="token punctuation">)</span>
 <span class="token operator">>></span><span class="token operator">></span> a
 <span class="token string">b'asdf'</span></code></pre>
-<p>Z <code>bytes</code> na string z wartością heksadecymalną</p>
+<p>From <code>bytes</code> to string with hexadecimal value</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> bytes_value <span class="token operator">=</span> <span class="token string">b"Value\x20\x3a\x29"</span>
 <span class="token operator">>></span><span class="token operator">></span> bytes_value<span class="token punctuation">.</span><span class="token builtin">hex</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token string">'56616c7565203a29'</span></code></pre>
-<p>Z <code>bytes</code> na <code>int</code></p>
+<p>From <code>bytes</code> to <code>int</code></p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> bytes_value <span class="token operator">=</span> <span class="token string">b"Value\x20\x3a\x29"</span>
 <span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">(</span>bytes_value<span class="token punctuation">.</span><span class="token builtin">hex</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span>
 <span class="token number">6224375411466320425</span></code></pre>
-<p>Z <code>bytes</code> na <code>str</code></p>
+<p>From <code>bytes</code> to <code>str</code></p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> bytes_value <span class="token operator">=</span> <span class="token string">b"Value\x20\x3a\x29"</span>
 <span class="token operator">>></span><span class="token operator">></span> bytes_value<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token string">'Value :)'</span>
 <span class="token operator">>></span><span class="token operator">></span> bytes_value<span class="token punctuation">.</span>decode<span class="token punctuation">(</span>encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
 <span class="token string">'Value :)'</span></code></pre>
-<h3>Konwersje ze stringa</h3>
-<p>Z <code>str</code> na bytes</p>
+<h3>Conversions from string</h3>
+<p>From <code>str</code> to bytes</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> <span class="token string">"Hello world!"</span>
 <span class="token operator">>></span><span class="token operator">></span> a<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token string">b'Hello world!'</span></code></pre>
-<p>Ze stringa z wartością heksadecymalną na <code>bytes</code></p>
+<p>From string with hexadecimal value to <code>bytes</code></p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">bytes</span><span class="token punctuation">.</span>fromhex<span class="token punctuation">(</span><span class="token string">"4548"</span><span class="token punctuation">)</span>
 <span class="token string">b'EH'</span></code></pre>
-<p>Z pojedynczego znaku na liczbową reprezentację z Unicode (przeciwieństwo <code>chr()</code>)</p>
+<p>From single character to numeric Unicode representation (opposite of <code>chr()</code>)</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span>
 <span class="token number">97</span></code></pre>
-<p>Ze stringa z wartością dziesiętną na liczbę</p>
+<p>From string with decimal value to number</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token string">"1234"</span><span class="token punctuation">)</span>
 <span class="token number">1234</span></code></pre>
-<p>Ze stringa z wartością binarną na liczbę</p>
+<p>From string with binary value to number</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token string">"10011"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
 <span class="token number">19</span></code></pre>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token string">"0b0011"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
 <span class="token number">19</span></code></pre>
-<p>Ze stringa z wartością heksadecymalną na liczbę</p>
+<p>From string with hexadecimal value to number</p>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token string">"e4b"</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span>
 <span class="token number">3659</span></code></pre>
 <pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token string">"0xe4b"</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span>

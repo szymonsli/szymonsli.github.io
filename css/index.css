@@ -55,13 +55,15 @@ section {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 .menu-item-container {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -109,7 +111,7 @@ footer {
   text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 580px) {
   section {
     min-height: calc(100vh - 13em);
   }
@@ -121,7 +123,10 @@ footer {
     justify-content: space-between;
     align-items: center;
   }
-  .top-menu { margin-right: 1.5em; }
+  .top-menu { 
+    margin-right: 1.5em;
+    width: auto;
+   }
   .menu-item { 
     padding: 0 0.5em;
     height: 100%;
@@ -146,7 +151,7 @@ footer {
   }
   .whoami { margin-left: 4em; }
   .top-menu { margin-right: 2em; }
-  .menu-item { padding: 0 2em; }
+  .menu-item:not(#language-switcher) { padding: 0 2em; }
   footer { padding: 4em; }
 }
 
@@ -184,6 +189,10 @@ footer {
 a:hover {
   color: #00d000;
   text-decoration: underline;
+}
+
+#language-switcher a {
+  text-decoration: none;
 }
 
 h2 {

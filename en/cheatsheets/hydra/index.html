@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,7 @@
     <header class="top-bar">
       <div class="whoami">
         <h1>
-          <a href="/"
+          <a href="/en/"
             >Szymon Śliwiński</a
           >
         </h1>
@@ -26,19 +26,19 @@
       <nav class="top-menu">
         <div class="menu-item-container">
           
-          <a class="menu-item" href="/about">
-            O mnie
+          <a class="menu-item" href="/en/about">
+            About me
           </a>
-          <!-- <a class="menu-item" href="/blog"> Blog </a> -->
-          <a class="menu-item" href="/cheatsheets">
+          <!-- <a class="menu-item" href="/en/blog"> Blog </a> -->
+          <a class="menu-item" href="/en/cheatsheets">
             Cheatsheets
           </a>
           <div class="menu-item" id="language-switcher"><a
-              href="/en/cheatsheets/hydra/"
-              onclick="localStorage.setItem('language', 'en')"
-              hreflang="en"
+              href="/cheatsheets/hydra/"
+              onclick="localStorage.setItem('language', 'pl')"
+              hreflang="pl"
             >
-              🇬🇧
+              🇵🇱
             </a></div>
         </div>
       </nav>
@@ -46,31 +46,30 @@
     <main>
 <section>
   <h2>Hydra</h2>
-  <div><p>Hydra jest narzędziem do ataków siłowych dla pentesterów. Nie używaj tego narzędzia na systemach lub aplikacjach, które nie należą do ciebie lub na testowanie których nie masz zgody.</p>
-<h3>Ważne parametry:</h3>
-<pre class="language-txt"><code class="language-txt">-h => pomoc
--l => pojedyncza nazwa użytkownika
--L => ścieżka do słownika z nazwami użytkownika
--p => pojedyncze hasło
--P => ścieżka do słownika z hasłami
--C => ściezka do słownika z parami login:hasło. Używane zamiast -L i -P
--s => port, jeżeli jest inny niż domyślny
--M => ścieżka do pliku z listą celów
--t => liczba wątków (domyślnie 16)
--U => pomoc dla konkretnego modułu</code></pre>
-<h3>Pomoc dla modułu:</h3>
+  <div><p>Hydra is a brute-forcing tool for penetration testers. Do not use this tool for systems or applications you don't own or without permission!</p>
+<h3>Important parameters:</h3>
+<pre class="language-txt"><code class="language-txt">-h => help
+-l => single username
+-L => path to a wordlist with usernames
+-p => single password
+-P => path to a wordlist with usernames
+-C => path to a file with login:password wordlist. Used instaed of -L and -P
+-s => port, if different than default is used
+-M => path to a file with targets
+-t => number of threads (default 16)
+-U => help for a specific module</code></pre>
+<h3>Help for a module:</h3>
 <pre class="language-sh"><code class="language-sh">hydra <span class="token parameter variable">-U</span> http-post-form</code></pre>
 <h3>HTTP POST</h3>
 <pre class="language-sh"><code class="language-sh">hydra <span class="token parameter variable">-L</span> users.txt <span class="token parameter variable">-P</span> passwords.txt <span class="token number">10.0</span>.0.2 <span class="token parameter variable">-s</span> <span class="token number">8080</span> http-post-form <span class="token string">"/login:username=^USER^&amp;password=^PASS^:Invalid"</span></code></pre>
-<p>Takie polecenie:</p>
+<p>What does it mean?</p>
 <ul>
-<li>Wysyła żądania POST na URL <code>http://10.0.0.2:8080/login</code></li>
-<li>Zawiera w body każdego żądania <code>login:username=^USER^&amp;password=^PASS^</code>, gdzie ^USER^ to wartość ze słownika users.txt, a ^PASS^ ze słownika passwords.txt</li>
-<li>Kontynuuje atak jeżeli w odpowiedzi znajduje się ciąg znaków &quot;Invalid&quot;, w przeciwnym wypadku przerywa z powodu odnalezienia szukanych wartości</li>
+<li>Sends POST requests to <code>http://10.0.0.2:8080/login</code></li>
+<li>Each request has body <code>login:username=^USER^&amp;password=^PASS^</code>, where ^USER^ is a value from users.txt file and ^PASS^ is a value from passwords.txt</li>
+<li>If there is the &quot;Invalid&quot; phrase in response, it continues the attack, otherwise the result is successfully found</li>
 </ul>
 <h3>SSH</h3>
 <pre class="language-sh"><code class="language-sh">hydra <span class="token parameter variable">-L</span> /wordlists/useres.txt <span class="token parameter variable">-P</span> /wordlists/passwords.txt <span class="token parameter variable">-t</span> <span class="token number">8</span> ssh://10.0.0.2</code></pre>
-<pre class="language-sh"><code class="language-sh">hydra <span class="token parameter variable">-l</span> admin <span class="token parameter variable">-P</span> /wordlists/passwords.txt <span class="token parameter variable">-t</span> <span class="token number">8</span> <span class="token number">10.0</span>.0.2 <span class="token function">ssh</span></code></pre>
 </div>
 </section>
 </main>
